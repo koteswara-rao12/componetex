@@ -1,0 +1,16 @@
+
+<div id="container" class="input-group" >
+    <div class="sections" (click)="selectSection('section1')" >
+        <span class="btn-lg btn-info" [ngClass]="{'active' : section1}">Section 1</span>
+    </div>
+    <div class="sections" (click)="selectSection('section2')" >
+        <span class="btn-lg btn-info" [ngClass]="{'active' : section2}">Section 2</span>
+    </div>
+    <div class="sections" (click)="selectSection('section3')">
+        <span class="btn-lg btn-info" [ngClass]="{'active' : section3}">Section 3</span>
+    </div>
+    
+</div>
+<section1 *ngIf="section1" class="changePosition" [ngClass]="{'spinner-border' : section1}"></section1>
+<section2 *ngIf="section2" class="changePosition" [ngClass]="{'spinner-border' : section2}"></section2>
+<section3 *ngIf="section3" class="changePosition" [ngClass]="{'spinner-border' : section3}"></section3>
